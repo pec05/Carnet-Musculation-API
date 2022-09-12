@@ -32,10 +32,8 @@ public class Exercice extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "muscle_id")
-    @NotEmpty
     private Muscle muscle;
 
-    @NotEmpty
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "exercice", fetch = FetchType.EAGER)
     private List<Serie> series;
 
